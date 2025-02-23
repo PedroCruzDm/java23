@@ -1,6 +1,7 @@
 package br.com.apenas.Whisperly.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ public class AlunoController {
     }
 
     @GetMapping("/{id}")
-    public String getMethodName(@RequestParam(value = "id", required = false) String param) {
+    public String getMethodName(@PathVariable(value="id")String param) {
         return "id pra pegar o usuario foi " + param;
     }
 }
